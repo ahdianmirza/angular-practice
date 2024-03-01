@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'angular-practice';
+  title = 'Angular 15 App';
+  visible = false;
+  num1 = 40;
+  num2 = 5;
 
   mouseHoverEvent() {
     console.info("Mouse Hover");
