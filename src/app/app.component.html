@@ -3,14 +3,14 @@
 <hr>
 
 <table border="1">
-  <tr *ngFor="let detail of StudentDetails; let i = index; let f = first; let l = last; let o = odd; let e = even">
+  <tr *ngFor="let detail of StudentDetails; let i = index; trackBy: trackByStudentName">
     <td>{{ i+1 }}</td>
     <td>{{ detail.name }}</td>
     <td>{{ detail.age }}</td>
     <td>{{ detail.gender }}</td>
-    <td>{{ f }}</td>
-    <td>{{ l }}</td>
-    <td>{{ o }}</td>
-    <td>{{ e }}</td>
   </tr>
 </table>
+
+<br>
+
+<button (click)="getMoreStudentData()">Fetch More Data</button>
