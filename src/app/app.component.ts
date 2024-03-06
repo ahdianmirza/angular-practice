@@ -84,4 +84,19 @@ export class AppComponent {
     }
     return "";
   }
+
+  getCssClass(input: string) {
+    let classType;
+    if (input == "main") {
+      classType = {
+        color1: true
+      }
+    } else {
+      classType = {
+        color2: true
+      }
+    }
+    return classType;
+  }
 }
+
