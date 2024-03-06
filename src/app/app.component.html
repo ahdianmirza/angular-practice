@@ -1,5 +1,18 @@
 <p>{{ title }}</p>
 
-<div *ngIf="num1 > 20">
-  this is {{ title }}
-</div>
+<hr>
+
+<input type="radio" name="radio1" (click)="Onchange(true)">True
+<input type="radio" name="radio1" (click)="Onchange(false)">False
+
+<hr>
+
+<div *ngIf="isVisible; then thenBlock; else elseBlock"></div>
+
+<ng-template #thenBlock>
+  This is True radio button clicked -- then block
+</ng-template>
+
+<ng-template #elseBlock>
+  This is False radio button clicked -- else block
+</ng-template>
