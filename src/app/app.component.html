@@ -13,4 +13,16 @@
 
 <br>
 
-<button (click)="getMoreStudentData()">Fetch More Data</button>
+<ul *ngFor="let detail of StudentDetails">
+  <div [ngStyle]="{'color': detail.age > 18 ? 'red' : 'green'}">
+    {{ detail.name }} age is {{ detail.age }}
+  </div>
+</ul>
+
+<h3>We are working with ngStyle with a function</h3>
+
+<ul *ngFor="let detail of StudentDetails">
+  <div [ngStyle]="{'color': getAge(detail.age)}">
+    {{ detail.name }} age is {{ detail.age }}
+  </div>
+</ul>

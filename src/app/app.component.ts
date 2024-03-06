@@ -13,12 +13,12 @@ export class AppComponent {
     this.StudentDetails = [
       {
         name: 'name 1',
-        age: 21,
+        age: 14,
         gender: 'Male',
       },
       {
         name: 'name 2',
-        age: 22,
+        age: 16,
         gender: 'Female',
       },
       {
@@ -38,32 +38,32 @@ export class AppComponent {
     this.StudentDetails = [
       {
         name: 'name 1',
-        age: 21,
+        age: 14,
         gender: 'Male',
       },
       {
         name: 'name 2',
-        age: 22,
+        age: 16,
         gender: 'Female',
       },
       {
         name: 'name 3',
-        age: 23,
+        age: 20,
         gender: 'Female',
       },
       {
         name: 'name 4',
-        age: 24,
+        age: 18,
         gender: 'Female',
       },
       {
         name: 'name 5',
-        age: 25,
+        age: 11,
         gender: 'Female',
       },
       {
         name: 'name 6',
-        age: 26,
+        age: 22,
         gender: 'Female',
       },
     ];
@@ -71,5 +71,17 @@ export class AppComponent {
 
   trackByStudentName(index: number, student: any): string {
     return student.name;
+  }
+
+  getAge(age: number) {
+    let val = age < 18 ? 'Under18' : 'Above18';
+
+    switch(val) {
+      case 'Under18':
+        return 'green';
+      case 'Above18':
+        return 'red'
+    }
+    return "";
   }
 }
