@@ -10,6 +10,7 @@ export class AppComponent {
   visible = false;
   num1 = 10;
   num2 = 5;
+  public color: any = '';
 
   isVisible = true;
 
@@ -19,5 +20,9 @@ export class AppComponent {
 
   Onchange(args: any) {
     this.isVisible = args;
+  }
+
+  SetColor(colorVal: any) {
+    this.color = colorVal.target.value;
   }
 }

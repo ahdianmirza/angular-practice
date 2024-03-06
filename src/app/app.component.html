@@ -2,17 +2,25 @@
 
 <hr>
 
-<input type="radio" name="radio1" (click)="Onchange(true)">True
-<input type="radio" name="radio1" (click)="Onchange(false)">False
+<select (change)="SetColor($event)">
+  <option value="">-- Select Color</option>
+  <option value="R">Red</option>
+  <option value="G">Green</option>
+  <option value="B">Blue</option>
+  <option value="D">Default Color</option>
+</select>
 
-<hr>
-
-<div *ngIf="isVisible; then thenBlock; else elseBlock"></div>
-
-<ng-template #thenBlock>
-  This is True radio button clicked -- then block
-</ng-template>
-
-<ng-template #elseBlock>
-  This is False radio button clicked -- else block
-</ng-template>
+<div [ngSwitch]="color">
+  <div *ngSwitchCase="'R'">
+    <h3 style="color: red;">This is Red color</h3>
+  </div>
+  <div *ngSwitchCase="'G'">
+    <h3 style="color: green;">This is Green color</h3>
+  </div>
+  <div *ngSwitchCase="'B'">
+    <h3 style="color: blue;">This is Blue color</h3>
+  </div>
+  <div *ngSwitchDefault>
+    <h3>This is Default color</h3>
+  </div>
+</div>
