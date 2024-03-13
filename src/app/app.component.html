@@ -2,15 +2,8 @@
 
 <hr>
 
-<table border="1">
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-    <th>DOB</th>
-  </tr>
-  <tr *ngFor="let student of studentInfo">
-    <td>{{ student.name | uppercase }}</td>
-    <td>{{ student.age }}</td>
-    <td>{{ student.dob | date: "dd-MM-yyyy"}}</td>
-  </tr>
-</table>
+<p>{{ dob }}</p>
+<br>
+<p>short date is {{ dob | date : "short" : 'm/d/yy' }}</p>
+<hr>
+<p>{{ salary | currency : 'USD' : true}}</p>
