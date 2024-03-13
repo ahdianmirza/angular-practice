@@ -7,16 +7,16 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
-  // {
-  //   path: '',
-  //   component: HomeComponent,
-  //   pathMatch: 'full',
-  // },
   {
     path: '',
-    redirectTo: 'home',
+    component: HomeComponent,
     pathMatch: 'full',
   },
+  // {
+  //   path: '',
+  //   redirectTo: 'home',
+  //   pathMatch: 'full',
+  // },
   {
     path: 'home',
     component: HomeComponent,
