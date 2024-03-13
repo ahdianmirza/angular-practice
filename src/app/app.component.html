@@ -2,14 +2,8 @@
 
 <hr>
 
-<p [ngClass]="['color1', 'font1']">Using ngClass as string</p>
+<div>sum of num {{ 10+20 }}</div>
 
-<div *ngFor="let detail of StudentDetails" [ngClass]="['color2', 'font1']">
-  {{ detail.name }}
-</div>
+<hr>
 
-<h3 [ngClass]="{'color1': true, 'color2': false}">using ngClass with object</h3>
-
-<div [ngClass]="getCssClass('main1')">
-  using ngClass as a method calling
-</div>
+<div>{{ num + 10 }}</div>
