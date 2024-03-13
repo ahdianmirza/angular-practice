@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular 15 App';
   num: number = 10;
+  firstName: string = "Ahdian Mirza Azri";
 }
 
