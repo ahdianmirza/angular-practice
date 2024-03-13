@@ -12,9 +12,10 @@ import { StudentStandAloneComponent } from './student-stand-alone/student-stand-
 import {FormsModule} from '@angular/forms';
 import { MultiplicationPipe } from './multiplication.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ContactUsComponent } from './contact-us/contact-us.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent],
+  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent, ContactUsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
