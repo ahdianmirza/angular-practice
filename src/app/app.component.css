@@ -1,13 +1,18 @@
-.color1 {
-  color: green;
+.navbar {
+  display: flex;
+  gap: 0 16px;
+  padding: 8px;
+  height: 40px;
+  background-color: #0f172a;
+  margin-bottom: 16px;
 }
-.color2 {
-  color: red;
+.navbar a {
+  text-decoration: none;
+  color: #f9fafb;
+  font-weight: bold;
+  padding: 8px;
+  border-radius: 8px;
 }
-
-.font1 {
-  font-size: 30px;
-}
-.font2 {
-  font-size: 40px;
+.navbar a:hover {
+  background-color: #334155;
 }

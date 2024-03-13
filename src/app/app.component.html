@@ -1,9 +1,12 @@
+<div class="navbar">
+  <a [routerLink]="['/home']">Home</a>
+  <a [routerLink]="['/student']">Student</a>
+  <a [routerLink]="['/teacher']">Teacher</a>
+  <a [routerLink]="['/contactus']">Contact Us</a>
+</div>
+
 <p>{{ title }}</p>
 
-<hr>
-
-<a [routerLink]="['/student']">Student</a> || 
-<a [routerLink]="['/teacher']">Teacher</a> || 
-
-<button (click)="dynamicRouter('student')">Go to pages</button>
-<router-outlet></router-outlet>
+<div>
+  <router-outlet></router-outlet>
+</div>

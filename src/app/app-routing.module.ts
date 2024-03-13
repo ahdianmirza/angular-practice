@@ -4,19 +4,29 @@ import { StudentComponent } from './student/student.component';
 import { TeacherComponent } from './teacher/teacher.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomeComponent } from './home/home.component';
 
 const routes: Routes = [
+  // {
+  //   path: '',
+  //   component: HomeComponent,
+  //   pathMatch: 'full',
+  // },
   {
-    path: "",
-    component: StudentComponent,
+    path: '',
+    redirectTo: 'home',
     pathMatch: 'full'
+  },
+  {
+    path: 'home',
+    component: HomeComponent
   },
   {
     path: 'student',
     children: [
-      {path: "", component: StudentComponent},
-      {path: "contactus", component: ContactUsComponent}
-    ]
+      { path: '', component: StudentComponent },
+      { path: 'contactus', component: ContactUsComponent },
+    ],
   },
   {
     path: 'teacher',
@@ -24,8 +34,8 @@ const routes: Routes = [
   },
   {
     path: '**',
-    component: PageNotFoundComponent
-  }
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({

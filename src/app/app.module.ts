@@ -13,9 +13,10 @@ import {FormsModule} from '@angular/forms';
 import { MultiplicationPipe } from './multiplication.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent, ContactUsComponent],
+  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent, ContactUsComponent, HomeComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
