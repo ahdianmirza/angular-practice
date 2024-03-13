@@ -6,7 +6,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title: string = 'Angular 15 App';
+  title: string = 'angular 15 app';
 
   dob = new Date('01/05/1990');
 
