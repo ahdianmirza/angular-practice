@@ -2,13 +2,15 @@
 
 <hr>
 
-<label for="">Enter Name: 
-  <input [value]="name1" (input)="name1 = $any($event.target).value">
-</label>
-
-<p>Updated name is <span style="color: red;">{{ name1 }}</span></p>
-
-<hr>
-
-<input [(ngModel)]="name2">
-<p>Updated name using ngModel is <span style="color: red;">{{ name2 }}</span></p>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Age</th>
+    <th>DOB</th>
+  </tr>
+  <tr *ngFor="let student of studentInfo">
+    <td>{{ student.name | uppercase }}</td>
+    <td>{{ student.age }}</td>
+    <td>{{ student.dob | date: "dd-MM-yyyy"}}</td>
+  </tr>
+</table>

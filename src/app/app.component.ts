@@ -8,7 +8,26 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title: string = 'Angular 15 App';
   
-  name1: string = "Ahdian Mirza";
-  name2: string = "Hilmy";
+  studentInfo: any[] = [];
+
+  constructor() {
+    this.studentInfo = [
+      {
+        name: 'name 1',
+        age: 20,
+        dob: '12/11/2024',
+      },
+      {
+        name: 'name 2',
+        age: 21,
+        dob: '09/11/2024',
+      },
+      {
+        name: 'name 3',
+        age: 22,
+        dob: '01/10/2024',
+      },
+    ];
+  }
 }
 
