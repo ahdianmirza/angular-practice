@@ -7,11 +7,23 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'angular 15 app';
+  numberArray: any[] = [];
 
-  dob = new Date('01/05/1990');
-
-  salary = 1000000;
-
-  constructor() {}
+  constructor() {
+    this.numberArray = [
+      {
+        num1: 5,
+        num2: 10,
+      },
+      {
+        num1: 10,
+        num2: 20,
+      },
+      {
+        num1: 15,
+        num2: 17,
+      },
+    ];
+  }
 }
 

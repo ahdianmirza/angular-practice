@@ -10,9 +10,10 @@ import { MatListModule } from '@angular/material/list';
 import { MouseHoverDirective } from './directive/mouse-hover.directive';
 import { StudentStandAloneComponent } from './student-stand-alone/student-stand-alone.component';
 import {FormsModule} from '@angular/forms';
+import { MultiplicationPipe } from './multiplication.pipe';
 
 @NgModule({
-  declarations: [AppComponent, StudentComponent, TeacherComponent],
+  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe],
   imports: [
     BrowserModule,
     AppRoutingModule,
