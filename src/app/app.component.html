@@ -1,7 +1,14 @@
 <p>{{ title }}</p>
-<div [innerHTML]="title"></div>
-<span [innerHTML]="firstName"></span>
 
 <hr>
 
-<a [href]="'https://github.com/ahdianmirza'">Click Me</a>
+<button (click)="showAlert()">Show Message</button>
+<button (click)="showSum()">Show sum of number</button>
+<p>Sum is {{ sum }}</p>
+
+<select (change)="setColor($event)">
+  <option value="">Select Color</option>
+  <option value="R">Red</option>
+  <option value="B">Blue</option>
+  <option value="Y">Yellow</option>
+</select>
