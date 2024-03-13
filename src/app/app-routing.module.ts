@@ -15,22 +15,23 @@ const routes: Routes = [
   {
     path: '',
     redirectTo: 'home',
-    pathMatch: 'full'
+    pathMatch: 'full',
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'student',
-    children: [
-      { path: '', component: StudentComponent },
-      { path: 'contactus', component: ContactUsComponent },
-    ],
+    component: StudentComponent,
   },
   {
     path: 'teacher',
     component: TeacherComponent,
+  },
+  {
+    path: 'contactus',
+    component: ContactUsComponent,
   },
   {
     path: '**',
