@@ -11,9 +11,10 @@ import { MouseHoverDirective } from './directive/mouse-hover.directive';
 import { StudentStandAloneComponent } from './student-stand-alone/student-stand-alone.component';
 import {FormsModule} from '@angular/forms';
 import { MultiplicationPipe } from './multiplication.pipe';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe],
+  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
