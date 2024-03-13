@@ -14,6 +14,7 @@ import { MultiplicationPipe } from './multiplication.pipe';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
+import { Angular15Service } from './angular15.service';
 
 @NgModule({
   declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent, ContactUsComponent, HomeComponent],
@@ -26,7 +27,7 @@ import { HomeComponent } from './home/home.component';
     StudentStandAloneComponent,
     FormsModule,
   ],
-  providers: [],
+  providers: [Angular15Service],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

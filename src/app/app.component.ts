@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { Angular15Service } from './angular15.service';
 
 @Component({
   selector: 'app-root',
@@ -8,8 +9,13 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title: string = 'angular 15 app';
+  displayMessage: string = "";
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private _service: Angular15Service) {}
+
+  ngOnInit() {
+    this.displayMessage = this._service.displayMsg();
+  }
 
   dynamicRouter(linkName: string) {
     if (linkName == 'student') {
