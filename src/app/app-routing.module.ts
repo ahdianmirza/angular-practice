@@ -5,6 +5,11 @@ import { TeacherComponent } from './teacher/teacher.component';
 
 const routes: Routes = [
   {
+    path: "",
+    component: StudentComponent,
+    pathMatch: 'full'
+  },
+  {
     path: 'student',
     component: StudentComponent,
   },
