@@ -9,20 +9,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatListModule } from '@angular/material/list';
 import { MouseHoverDirective } from './directive/mouse-hover.directive';
 import { StudentStandAloneComponent } from './student-stand-alone/student-stand-alone.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    StudentComponent,
-    TeacherComponent,
-  ],
+  declarations: [AppComponent, StudentComponent, TeacherComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     MouseHoverDirective,
     MatListModule,
-    StudentStandAloneComponent
+    StudentStandAloneComponent,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

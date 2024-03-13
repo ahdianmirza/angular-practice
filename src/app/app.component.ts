@@ -7,18 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'Angular 15 App';
-  sum: number = 0;
   
-  showAlert() {
-    alert("Hello");
-  }
-
-  showSum() {
-    this.sum = 10+20;
-  }
-
-  setColor(color: any) {
-    alert(color.target.value)
-  }
+  name1: string = "Ahdian Mirza";
+  name2: string = "Hilmy";
 }
 

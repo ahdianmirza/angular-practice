@@ -2,13 +2,13 @@
 
 <hr>
 
-<button (click)="showAlert()">Show Message</button>
-<button (click)="showSum()">Show sum of number</button>
-<p>Sum is {{ sum }}</p>
+<label for="">Enter Name: 
+  <input [value]="name1" (input)="name1 = $any($event.target).value">
+</label>
 
-<select (change)="setColor($event)">
-  <option value="">Select Color</option>
-  <option value="R">Red</option>
-  <option value="B">Blue</option>
-  <option value="Y">Yellow</option>
-</select>
+<p>Updated name is <span style="color: red;">{{ name1 }}</span></p>
+
+<hr>
+
+<input [(ngModel)]="name2">
+<p>Updated name using ngModel is <span style="color: red;">{{ name2 }}</span></p>
