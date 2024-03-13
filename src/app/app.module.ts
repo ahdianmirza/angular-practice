@@ -15,6 +15,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { Angular15Service } from './angular15.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent, ContactUsComponent, HomeComponent],
@@ -26,6 +27,7 @@ import { Angular15Service } from './angular15.service';
     MatListModule,
     StudentStandAloneComponent,
     FormsModule,
+    HttpClientModule
   ],
   providers: [Angular15Service],
   bootstrap: [AppComponent],

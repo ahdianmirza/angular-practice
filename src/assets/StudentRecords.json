@@ -1,0 +1,52 @@
+[
+  {
+    "userId": 1,
+    "firstName": "Krish",
+    "lastName": "Lee",
+    "phoneNumber": "123456",
+    "emailAddress": "dotnetoffice16@gmail.com",
+    "age": "22",
+    "gender": "Male",
+    "images": "../assets/images/krish.jpg"
+  },
+  {
+    "userId": 2,
+    "firstName": "Rimmy",
+    "lastName": "jacson",
+    "phoneNumber": "1234567",
+    "emailAddress": "dotnetoffice16@gmail.com",
+    "age": "20",
+    "gender": "Female",
+    "images": "../assets/images/rimmy.jpeg"
+  },
+  {
+    "userId": 3,
+    "firstName": "denial",
+    "lastName": "roast",
+    "phoneNumber": "33333333",
+    "emailAddress": "dotnetoffice16@gmail.com",
+    "age": "24",
+    "gender": "Male",
+    "images": "../assets/images/denial.jpeg"
+  },
+  {
+    "userId": 4,
+    "firstName": "devid",
+    "lastName": "neo",
+    "phoneNumber": "222222222",
+    "emailAddress": "dotnetoffice16@gmail.com",
+    "age": "21",
+    "gender": "Female",
+    "images": "../assets/images/devid.png"
+  },
+  {
+    "userId": 5,
+    "firstName": "jone",
+    "lastName": "mac",
+    "phoneNumber": "111111111",
+    "emailAddress": "dotnetoffice16@gmail.com",
+    "age": "25",
+    "gender": "Female",
+    "images": "../assets/images/jone.jpg"
+  }
+]
