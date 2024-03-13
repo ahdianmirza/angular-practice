@@ -2,6 +2,8 @@
 
 <hr>
 
-<div *ngFor="let num of numberArray">
-  multiplication of {{ num.num1 }} and {{ num.num2 }} is {{ num.num1 | multiplication : num.num2 }}
-</div>
+<a [routerLink]="['/student']">Student</a> || 
+<a [routerLink]="['/teacher']">Teacher</a>
+
+<button (click)="dynamicRouter('student')">Go to pages</button>
+<router-outlet></router-outlet>

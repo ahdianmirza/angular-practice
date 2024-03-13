@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,23 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title: string = 'angular 15 app';
-  numberArray: any[] = [];
 
-  constructor() {
-    this.numberArray = [
-      {
-        num1: 5,
-        num2: 10,
-      },
-      {
-        num1: 10,
-        num2: 20,
-      },
-      {
-        num1: 15,
-        num2: 17,
-      },
-    ];
+  constructor(private router: Router) {}
+
+  dynamicRouter(linkName: string) {
+    if (linkName == 'student') {
+      this.router.navigate(['/student']);
+    } else {
+      this.router.navigate(['/teacher']);
+    }
   }
 }
 
