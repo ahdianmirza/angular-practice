@@ -12,7 +12,13 @@
         <a href="#"><i class="bi bi-instagram"></i></a>
         <a href="#"><i class="bi bi-github"></i></a>
       </div>
-      <p>Email : {{ details.emailAddress }}</p>
+
+      <p *ngIf="!editMode">Email : {{ details.emailAddress }}</p>
+      <div *ngIf="editMode">
+        <input type="text" [(ngModel)]="details.emailAddress">
+      </div>
+      <button *ngIf="editMode" class="btn btn-primary my-3" (click)="editMode = false" [routerLink]="['/student/student-details', details.userId]">Update</button>
+
       <p>Phone Number : {{ details.phoneNumber }}</p>
       <button class="btn btn-primary">Contact Me</button>
     </div>

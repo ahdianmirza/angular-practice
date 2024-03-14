@@ -11,6 +11,7 @@ export class StudentDetailsComponent implements OnInit {
   details: any;
   userId: any;
   studentInfo: any = [];
+  editMode: boolean = false;
 
   constructor(
     public activatedRoute: ActivatedRoute,
@@ -18,19 +19,17 @@ export class StudentDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    // this.userId = this.activatedRoute.snapshot.paramMap.get('id');
-    // this.userId = this.activatedRoute.snapshot.params['id'];
-    // this._service.getStudentDetails().subscribe(detail => {
-    //   this.studentInfo = detail;
-    //   this.details = this.studentInfo.find((info: any) => info.userId == this.userId);
-    // });
-
     this.activatedRoute.paramMap.subscribe(data => {
       this.userId = data.get('id');
       this._service.getStudentDetails().subscribe(detail => {
         this.studentInfo = detail;
         this.details = this.studentInfo.find((info: any) => info.userId == this.userId);
       });
+    });
+
+    // this.editMode = Boolean(this.activatedRoute.snapshot.queryParamMap.get('edit'));
+    this.activatedRoute.queryParamMap.subscribe(data => {
+      this.editMode = Boolean(data.get('edit'));
     })
   }
 }
