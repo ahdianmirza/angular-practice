@@ -14,7 +14,6 @@ export class StudentComponent {
   ngOnInit() {
     this._service.getStudentDetails().subscribe(details => {
       this.studentInfo = details;
-      console.info(details);
     })
   }
 }
