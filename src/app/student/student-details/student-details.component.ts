@@ -18,10 +18,19 @@ export class StudentDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.userId = this.activatedRoute.snapshot.paramMap.get('id');
-    this._service.getStudentDetails().subscribe(detail => {
-      this.studentInfo = detail;
-      this.details = this.studentInfo.find((info: any) => info.userId == this.userId);
+    // this.userId = this.activatedRoute.snapshot.paramMap.get('id');
+    // this.userId = this.activatedRoute.snapshot.params['id'];
+    // this._service.getStudentDetails().subscribe(detail => {
+    //   this.studentInfo = detail;
+    //   this.details = this.studentInfo.find((info: any) => info.userId == this.userId);
+    // });
+
+    this.activatedRoute.paramMap.subscribe(data => {
+      this.userId = data.get('id');
+      this._service.getStudentDetails().subscribe(detail => {
+        this.studentInfo = detail;
+        this.details = this.studentInfo.find((info: any) => info.userId == this.userId);
+      });
     })
   }
 }
