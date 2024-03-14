@@ -26,6 +26,10 @@ export class AppComponent {
     this.getDataWithObservable();
     this.data.subscribe((res: any) => {
       console.info(res);
+    }, (error: any) => {
+      alert(error.message);
+    }, () => {
+      alert("Observable completing method");
     });
   }
 
@@ -49,8 +53,10 @@ export class AppComponent {
       setTimeout(() => res.next("1"), 1000)
       setTimeout(() => res.next('2'), 2000);
       setTimeout(() => res.next('3'), 3000);
+      // setTimeout(() => res.error(new Error('Error occured while fetching the data')), 3000);
       setTimeout(() => res.next('4'), 4000);
       setTimeout(() => res.next('5'), 5000);
+      setTimeout(() => res.complete(), 5000);
     });
   }
 }
