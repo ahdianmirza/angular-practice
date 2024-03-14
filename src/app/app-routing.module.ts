@@ -14,6 +14,11 @@ const routes: Routes = [
     pathMatch: 'full',
   },
   {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  },
+  {
     path: 'home',
     component: HomeComponent,
   },
@@ -21,9 +26,15 @@ const routes: Routes = [
     path: 'student',
     component: StudentComponent,
   },
+  // {
+  //   path: 'student/student-details/:id',
+  //   component: StudentDetailsComponent,
+  // },
   {
-    path: 'student/student-details/:id',
-    component: StudentDetailsComponent,
+    path: 'student',
+    children: [
+      {path: 'student-details/:id', component: StudentDetailsComponent}
+    ],
   },
   {
     path: 'teacher',

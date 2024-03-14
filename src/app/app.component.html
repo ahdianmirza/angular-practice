@@ -1,28 +1,14 @@
 <div class="navbar">
   <ul>
-    <!-- <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/home']">Home</a></li>
+    <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/home']">Home</a></li>
     <li [routerLinkActive]="'active'"><a [routerLink]="['/student']">Student</a></li>
     <li [routerLinkActive]="'active'"><a [routerLink]="['/teacher']">Teacher</a></li>
-    <li [routerLinkActive]="'active'"><a [routerLink]="['/contactus']">Contact Us</a></li> -->
-
-    <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a routerLink="" fragment="home">Home</a></li>
-    <li [routerLinkActive]="'active'"><a routerLink="" fragment="student">Student</a></li>
-    <li [routerLinkActive]="'active'"><a routerLink="" fragment="teacher">Teacher</a></li>
-    <li [routerLinkActive]="'active'"><a routerLink="" fragment="contact-us">Contact Us</a></li>
+    <li [routerLinkActive]="'active'"><a [routerLink]="['/contactus']">Contact Us</a></li>
   </ul>
 </div>
 
 <p>{{ title }}</p>
 
 <div class="mt-5">
-  <div class="d-flex flex-column" style="width: 50%;">
-    <!-- <label for="username">Username: </label>
-    <textarea type="text" id="username" [(ngModel)]="username" placeholder="Name"></textarea> -->
-    <p [innerHTML]="username"></p>
-  </div>
-  <app-home id="home"></app-home>
-  <app-student id="student"></app-student>
-  <app-teacher id="teacher"></app-teacher>
-  <app-contact-us id="contact-us"></app-contact-us>
-  <!-- <router-outlet></router-outlet> -->
+  <router-outlet></router-outlet>
 </div>
