@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Angular15Service } from './angular15.service';
 import { Observable, from, of } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
+import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-root',
@@ -10,15 +11,18 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class AppComponent {
   title: string = 'angular 15 app';
-  displayMessage: string = "";
   data: any;
+  username: SafeHtml = "";
 
-  constructor(private activatedRoute: ActivatedRoute) {}
+  constructor(private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
     this.activatedRoute.fragment.subscribe(section => {
       this.goToSection(section);
     })
+
+    const input = `<script>alert("Hello")</script>`;
+    this.username = this.sanitizer.bypassSecurityTrustHtml(input);
   }
 
   public getDataWithPromise() {

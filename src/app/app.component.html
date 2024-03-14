@@ -13,9 +13,13 @@
 </div>
 
 <p>{{ title }}</p>
-<p style="color: red;">{{ displayMessage }}</p>
 
-<div>
+<div class="mt-5">
+  <div class="d-flex flex-column" style="width: 50%;">
+    <!-- <label for="username">Username: </label>
+    <textarea type="text" id="username" [(ngModel)]="username" placeholder="Name"></textarea> -->
+    <p [innerHTML]="username"></p>
+  </div>
   <app-home id="home"></app-home>
   <app-student id="student"></app-student>
   <app-teacher id="teacher"></app-teacher>
