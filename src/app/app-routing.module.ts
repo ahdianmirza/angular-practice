@@ -5,6 +5,7 @@ import { TeacherComponent } from './teacher/teacher.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
+import { StudentDetailsComponent } from './student/student-details/student-details.component';
 
 const routes: Routes = [
   {
@@ -12,11 +13,6 @@ const routes: Routes = [
     component: HomeComponent,
     pathMatch: 'full',
   },
-  // {
-  //   path: '',
-  //   redirectTo: 'home',
-  //   pathMatch: 'full',
-  // },
   {
     path: 'home',
     component: HomeComponent,
@@ -24,6 +20,10 @@ const routes: Routes = [
   {
     path: 'student',
     component: StudentComponent,
+  },
+  {
+    path: 'student/student-details/:id',
+    component: StudentDetailsComponent,
   },
   {
     path: 'teacher',

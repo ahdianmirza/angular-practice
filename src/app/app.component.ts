@@ -15,22 +15,22 @@ export class AppComponent {
   constructor(private _service: Angular15Service) {}
 
   ngOnInit() {
-    let response = this.getDataWithPromise();
-    response.then(resolve => {
-      console.info(resolve);
-    }, reject => {
-      console.info(reject);
-    });
+    // let response = this.getDataWithPromise();
+    // response.then(resolve => {
+    //   console.info(resolve);
+    // }, reject => {
+    //   console.info(reject);
+    // });
 
     // Observable call
-    this.getDataWithObservable();
-    this.data.subscribe((res: any) => {
-      console.info(res);
-    }, (error: any) => {
-      alert(error.message);
-    }, () => {
-      alert("Observable completing method");
-    });
+    // this.getDataWithObservable();
+    // this.data.subscribe((res: any) => {
+    //   console.info(res);
+    // }, (error: any) => {
+    //   alert(error.message);
+    // }, () => {
+    //   alert("Observable completing method");
+    // });
   }
 
   public getDataWithPromise() {
@@ -74,12 +74,12 @@ export class AppComponent {
     //   setTimeout(() => res.complete(), 3000);
     // });
 
-    const array1: any[] = [1, 2, 3, 4];
-    const array2: any[] = [8, 9, 7, 1];
+    // const array1: any[] = [1, 2, 3, 4];
+    // const array2: any[] = [8, 9, 7, 1];
 
     // this.data = of(array1, array2, 5, 6, "Ahdian Mirza");
 
-    this.data = from(array1);
+    // this.data = from(array1);
   }
 }
 

@@ -16,9 +16,10 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { Angular15Service } from './angular15.service';
 import { HttpClientModule } from '@angular/common/http';
+import { StudentDetailsComponent } from './student/student-details/student-details.component';
 
 @NgModule({
-  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent, ContactUsComponent, HomeComponent],
+  declarations: [AppComponent, StudentComponent, TeacherComponent, MultiplicationPipe, PageNotFoundComponent, ContactUsComponent, HomeComponent, StudentDetailsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
