@@ -1,9 +1,14 @@
 <div class="navbar">
   <ul>
-    <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/home']">Home</a></li>
+    <!-- <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/home']">Home</a></li>
     <li [routerLinkActive]="'active'"><a [routerLink]="['/student']">Student</a></li>
     <li [routerLinkActive]="'active'"><a [routerLink]="['/teacher']">Teacher</a></li>
-    <li [routerLinkActive]="'active'"><a [routerLink]="['/contactus']">Contact Us</a></li>
+    <li [routerLinkActive]="'active'"><a [routerLink]="['/contactus']">Contact Us</a></li> -->
+
+    <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a routerLink="" fragment="home">Home</a></li>
+    <li [routerLinkActive]="'active'"><a routerLink="" fragment="student">Student</a></li>
+    <li [routerLinkActive]="'active'"><a routerLink="" fragment="teacher">Teacher</a></li>
+    <li [routerLinkActive]="'active'"><a routerLink="" fragment="contact-us">Contact Us</a></li>
   </ul>
 </div>
 
@@ -11,5 +16,9 @@
 <p style="color: red;">{{ displayMessage }}</p>
 
 <div>
-  <router-outlet></router-outlet>
+  <app-home id="home"></app-home>
+  <app-student id="student"></app-student>
+  <app-teacher id="teacher"></app-teacher>
+  <app-contact-us id="contact-us"></app-contact-us>
+  <!-- <router-outlet></router-outlet> -->
 </div>

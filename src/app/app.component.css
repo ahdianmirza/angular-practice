@@ -3,6 +3,9 @@
   height: 40px;
   background-color: #0f172a;
   margin-bottom: 16px;
+  position: fixed;
+  width: 100%;
+  z-index: 10;
 }
 .navbar ul {
   list-style-type: none;
