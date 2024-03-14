@@ -17,10 +17,6 @@ export class AppComponent {
   constructor(private activatedRoute: ActivatedRoute, private sanitizer: DomSanitizer) {}
 
   ngOnInit() {
-    this.activatedRoute.fragment.subscribe(section => {
-      this.goToSection(section);
-    })
-
     const input = `<script>alert("Hello")</script>`;
     this.username = this.sanitizer.bypassSecurityTrustHtml(input);
   }
@@ -36,10 +32,6 @@ export class AppComponent {
     })
 
     return promise;
-  }
-
-  goToSection(section: any = "") {
-    document.getElementById(section)!.scrollIntoView({behavior: 'smooth'});
   }
 }
 

@@ -2,7 +2,7 @@
   <ul>
     <li [routerLinkActive]="'active'" [routerLinkActiveOptions]="{exact: true}"><a [routerLink]="['/home']">Home</a></li>
     <li [routerLinkActive]="'active'"><a [routerLink]="['/student']">Student</a></li>
-    <li [routerLinkActive]="'active'"><a [routerLink]="['/teacher']">Teacher</a></li>
+    <li [routerLinkActive]="'active'"><a [routerLink]="[{outlets: {stdList: ['teacher']}}]">Teacher</a></li>
     <li [routerLinkActive]="'active'"><a [routerLink]="['/contactus']">Contact Us</a></li>
   </ul>
 </div>
@@ -11,4 +11,5 @@
 
 <div class="mt-5">
   <router-outlet></router-outlet>
+  <router-outlet name="stdList"></router-outlet>
 </div>
